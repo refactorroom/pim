@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-07-13 06:02:40.888 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "pim-example",
+  "operation_name": "",
+  "level": "warning",
+  "message": "This is a warning message - potentially harmful situation",
+  "file": "console.go:github.com/refactorroom/pim.Warning:L318",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 06:06:24.430 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "pim-example",
+  "operation_name": "",
+  "level": "warning",
+  "message": "This is a warning message - potentially harmful situation",
+  "file": "console.go:github.com/refactorroom/pim.Warning:L318",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 06:06:24.539 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "pim-example",
+  "operation_name": "",
+  "level": "warning",
+  "message": "Warning logs are also processed by all outputs",
+  "file": "console.go:github.com/refactorroom/pim.Warning:L318",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},

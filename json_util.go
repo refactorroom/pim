@@ -1,4 +1,4 @@
-package console
+package pim
 
 import (
 	"bytes"
@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"strings"
 )
-
-
 
 // JsonOptions configures the JSON output format
 type JsonOptions struct {

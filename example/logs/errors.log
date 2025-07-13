@@ -1,0 +1,3 @@
+[2025-07-13 07:08:38] [WARNING] [outputs-demo] High memory usage detected {memory_usage=85%, threshold=80%, action=monitor}
+[2025-07-13 07:08:38] [ERROR] [outputs-demo] Database connection failed {error=connection timeout, retries=3, host=db.example.com, severity=high}
+[2025-07-13 07:08:38] [WARNING] [outputs-demo] Failed login attempt {blocked=true, username=admin, ip=192.168.1.200, reason=invalid password, attempts=5}

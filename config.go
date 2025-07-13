@@ -1,4 +1,4 @@
-package console
+package pim
 
 import (
 	"github.com/fatih/color"
@@ -125,9 +125,13 @@ const (
 )
 
 var (
-	currentLogLevel = InfoLevel
-	showFileLine    = true
-	showGoroutineID = true
+	currentLogLevel  = InfoLevel
+	showFileLine     = true
+	showGoroutineID  = true
+	showFunctionName = true
+	stackDepth       = 3
+	showPackageName  = true
+	showFullPath     = false
 )
 
 // Helper functions for colored output
@@ -162,3 +166,24 @@ func DisableColors() {
 func EnableColors() {
 	color.NoColor = false
 }
+
+// Enhanced configuration functions
+func SetShowFunctionName(show bool) {
+	showFunctionName = show
+}
+
+func SetShowPackageName(show bool) {
+	showPackageName = show
+}
+
+func SetShowFullPath(show bool) {
+	showFullPath = show
+}
+
+func SetStackDepth(depth int) {
+	if depth > 0 && depth <= 10 {
+		stackDepth = depth
+	}
+}
+
+

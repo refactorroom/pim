@@ -4,11 +4,11 @@ data := map[string]interface{}{
     "age": 30,
     "isActive": true,
 }
-console.Json(data)
-console.JsonWithLabel("User Data", data)
+pim.Json(data)
+pim.JsonWithLabel("User Data", data)
 
 // Request logging
-console.JsonRequest("POST", "/api/users", data, map[string]interface{}{
+pim.JsonRequest("POST", "/api/users", data, map[string]interface{}{
     "headers": map[string]string{
         "Content-Type": "application/json",
     },
@@ -20,7 +20,7 @@ response := map[string]interface{}{
     "id": "123",
     "status": "created",
 }
-console.JsonResponse(201, response, map[string]interface{}{
+pim.JsonResponse(201, response, map[string]interface{}{
     "duration": "125ms",
     "labels": []string{"success"},
 })
