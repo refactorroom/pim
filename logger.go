@@ -65,13 +65,40 @@ func getCallInfo(skip int) CallInfo {
 	}
 }
 
-// getFileInfo returns formatted file and line information
-func getFileInfo() string {
+// getFileInfoForLogLevel returns formatted file and line information for different log levels
+func getFileInfoForLogLevel() string {
 	if !showFileLine {
 		return ""
 	}
 
-	callInfo := getCallInfo(3) // Skip 3 frames to get to the caller
+	// Start with the configured skip frames
+	skip := callerSkipFrames
+	for skip < callerSkipFrames+10 { // Safety limit: search up to 10 additional frames
+		callInfo := getCallInfo(skip)
+		if callInfo.File == "" {
+			break
+		}
+
+		// If the package name doesn't contain "pim" or "github.com/refactorroom/pim",
+		// then we've found the caller
+		if !strings.Contains(callInfo.Package, "pim") &&
+			!strings.Contains(callInfo.Package, "github.com/refactorroom/pim") {
+			parts := []string{callInfo.File}
+			if showFunctionName && callInfo.Function != "" {
+				if showPackageName && callInfo.Package != "" {
+					parts = append(parts, fmt.Sprintf("%s.%s", callInfo.Package, callInfo.Function))
+				} else {
+					parts = append(parts, callInfo.Function)
+				}
+			}
+			parts = append(parts, fmt.Sprintf("L%d", callInfo.Line))
+			return strings.Join(parts, ":")
+		}
+		skip++
+	}
+
+	// Fallback to original behavior if we can't find external caller
+	callInfo := getCallInfo(callerSkipFrames + 1)
 	if callInfo.File == "" {
 		return ""
 	}
@@ -85,8 +112,12 @@ func getFileInfo() string {
 		}
 	}
 	parts = append(parts, fmt.Sprintf("L%d", callInfo.Line))
-
 	return strings.Join(parts, ":")
+}
+
+// getFileInfo returns formatted file and line information
+func getFileInfo() string {
+	return getFileInfoForLogLevel()
 }
 
 // getGoroutineID returns the current goroutine ID
@@ -211,7 +242,7 @@ func LogWithStackTrace(Prefix, msg string, level LogLevel) {
 	timestamp := time.Now().UTC().Format("2006-01-02 15:04:05.000 UTC")
 	fileInfo := getFileInfo()
 	goroutineInfo := getGoroutineID()
-	stackTrace := getStackTrace(4) // Skip 4 frames to get meaningful stack
+	stackTrace := getStackTrace(callerSkipFrames + 2) // Skip configured frames + 2 for LogWithStackTrace calls
 
 	// Construct the log message
 	logMsg := fmt.Sprintf("%s [%s]", Prefix, timestamp)
