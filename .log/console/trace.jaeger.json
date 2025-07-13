@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-07-13 06:01:14.369 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "pim-example",
+  "operation_name": "",
+  "level": "trace",
+  "message": "This is a trace message - most detailed debugging",
+  "file": "console.go:github.com/refactorroom/pim.Trace:L342",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},

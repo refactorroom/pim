@@ -1,0 +1,10 @@
+[2025-07-13 08:28:23] [INFO] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L89] Application started {version=1.0.0, port=8080}
+[2025-07-13 08:28:23] [INFO] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L95] User authenticated {user_id=user123, method=password, ip=192.168.1.100}
+[2025-07-13 08:28:23] [INFO] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L102] Database query executed {duration=15ms, rows=1, query=SELECT * FROM users WHERE id = ?}
+[2025-07-13 08:28:23] [INFO] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L109] API request processed {path=/api/users, status=200, duration=45ms, method=GET}
+[2025-07-13 08:28:23] [WARNING] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L117] High memory usage detected {memory_usage=85%, threshold=80%}
+[2025-07-13 08:28:23] [ERROR] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L123] Database connection failed {error=connection timeout, retries=3, host=db.example.com}
+[2025-07-13 08:28:23] [INFO] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L130] Performance metrics {cpu_usage=45%, memory_usage=60%, disk_usage=30%, active_users=150}
+[2025-07-13 08:28:23] [INFO] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L138] Order placed {amount=99.99, currency=USD, items=3, order_id=ORD-12345, user_id=user123}
+[2025-07-13 08:28:23] [INFO] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L147] Backup completed {backup_id=backup-2024-01-15, size=2.5GB, duration=15m30s, status=success}
+[2025-07-13 08:28:23] [WARNING] [rotation-demo] [file_rotation_demo.go:main.demoScenarios:L155] Failed login attempt {attempts=5, username=admin, ip=192.168.1.200, reason=invalid password}

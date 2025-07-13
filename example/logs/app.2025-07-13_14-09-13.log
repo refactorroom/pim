@@ -1,0 +1,22 @@
+[2025-07-13 07:03:09] [INFO] [rotation-demo] Application started {version=1.0.0, port=8080}
+[2025-07-13 07:03:09] [INFO] [rotation-demo] User authenticated {user_id=user123, method=password, ip=192.168.1.100}
+[2025-07-13 07:03:09] [INFO] [rotation-demo] Database query executed {query=SELECT * FROM users WHERE id = ?, duration=15ms, rows=1}
+[2025-07-13 07:03:09] [INFO] [rotation-demo] API request processed {path=/api/users, status=200, duration=45ms, method=GET}
+[2025-07-13 07:03:09] [WARNING] [rotation-demo] High memory usage detected {memory_usage=85%, threshold=80%}
+[2025-07-13 07:03:09] [ERROR] [rotation-demo] Database connection failed {error=connection timeout, retries=3, host=db.example.com}
+[2025-07-13 07:03:09] [INFO] [rotation-demo] Performance metrics {disk_usage=30%, active_users=150, cpu_usage=45%, memory_usage=60%}
+[2025-07-13 07:03:09] [INFO] [rotation-demo] Order placed {amount=99.99, currency=USD, items=3, order_id=ORD-12345, user_id=user123}
+[2025-07-13 07:03:09] [INFO] [rotation-demo] Backup completed {status=success, backup_id=backup-2024-01-15, size=2.5GB, duration=15m30s}
+[2025-07-13 07:03:09] [WARNING] [rotation-demo] Failed login attempt {ip=192.168.1.200, reason=invalid password, attempts=5, username=admin}
+[2025-07-13 07:08:38] [INFO] [outputs-demo] Application started {port=8080, outputs=multiple, version=1.0.0}
+[2025-07-13 07:08:38] [INFO] [outputs-demo] User authenticated {user_id=user123, method=password, ip=192.168.1.100, success=true}
+[2025-07-13 07:08:38] [WARNING] [outputs-demo] High memory usage detected {memory_usage=85%, threshold=80%, action=monitor}
+[2025-07-13 07:08:38] [ERROR] [outputs-demo] Database connection failed {error=connection timeout, retries=3, host=db.example.com, severity=high}
+[2025-07-13 07:08:38] [INFO] [outputs-demo] Performance metrics {response_time=120ms, cpu_usage=45%, memory_usage=60%, disk_usage=30%, active_users=150}
+[2025-07-13 07:08:38] [INFO] [outputs-demo] Order placed {amount=99.99, currency=USD, items=3, status=pending, order_id=ORD-12345, user_id=user123}
+[2025-07-13 07:08:38] [INFO] [outputs-demo] Backup completed {duration=15m30s, status=success, location=s3://backups/, backup_id=backup-2024-01-15, size=2.5GB}
+[2025-07-13 07:08:38] [WARNING] [outputs-demo] Failed login attempt {username=admin, ip=192.168.1.200, reason=invalid password, attempts=5, blocked=true}
+[2025-07-13 07:08:41] [INFO] [outputs-demo] Additional log entry {iteration=1, timestamp=1752390521, sequence=seq-001}
+[2025-07-13 07:08:46] [INFO] [outputs-demo] Additional log entry {iteration=2, timestamp=1752390526, sequence=seq-002}
+[2025-07-13 07:08:55] [INFO] [outputs-demo] Additional log entry {timestamp=1752390535, sequence=seq-003, iteration=3}
+[2025-07-13 07:09:04] [INFO] [outputs-demo] Additional log entry {iteration=4, timestamp=1752390544, sequence=seq-004}
