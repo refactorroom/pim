@@ -306,21 +306,10 @@ go test -cover ./...
 
 ---
 
-## 🔄 Migration & Compatibility
+## 🔄  Compatibility
 
-- **🔄 Legacy Support** - `pim` is the successor to `clg`, with full backward compatibility
 - **🚀 Modern APIs** - New ergonomic, structured APIs for better developer experience
 - **📦 Easy Migration** - Simple import path changes with comprehensive migration guide
-
-### Migration Example
-
-```go
-// Old (still supported)
-import "github.com/yourusername/clg/pim"
-
-// New (recommended)
-import "github.com/refactorrom/pim"
-```
 
 ---
 
@@ -344,7 +333,7 @@ We welcome contributions! See our [Contributing Guide](documents/lession_contrib
 
 **MIT License** - see [LICENSE](LICENSE) for details
 
-Made with ❤️ by the pim community
+Made with ❤️ by The Refactor Room community
 
 [![GitHub stars](https://img.shields.io/github/stars/refactorrom/pim?style=social)](https://github.com/refactorrom/pim)
 [![GitHub forks](https://img.shields.io/github/forks/refactorrom/pim?style=social)](https://github.com/refactorrom/pim)
