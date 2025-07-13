@@ -325,12 +325,54 @@ func TestDefaultValues(t *testing.T) {
 		{"showPackageName", showPackageName, true},
 		{"showFullPath", showFullPath, false},
 		{"callerSkipFrames", callerSkipFrames, 3},
+		{"enableFileLogging", enableFileLogging, false}, // File logging disabled by default
 	}
 
 	for _, test := range tests {
 		if test.actual != test.expected {
 			t.Errorf("Expected default %s to be %v, got %v", test.name, test.expected, test.actual)
 		}
+	}
+}
+
+func TestSetFileLogging(t *testing.T) {
+	originalEnabled := enableFileLogging
+	defer func() { enableFileLogging = originalEnabled }()
+
+	// Test enabling
+	SetFileLogging(true)
+	if !enableFileLogging {
+		t.Error("Expected enableFileLogging to be true after SetFileLogging(true)")
+	}
+	if !GetFileLogging() {
+		t.Error("Expected GetFileLogging() to return true after SetFileLogging(true)")
+	}
+
+	// Test disabling
+	SetFileLogging(false)
+	if enableFileLogging {
+		t.Error("Expected enableFileLogging to be false after SetFileLogging(false)")
+	}
+	if GetFileLogging() {
+		t.Error("Expected GetFileLogging() to return false after SetFileLogging(false)")
+	}
+}
+
+func TestGetFileLogging(t *testing.T) {
+	originalEnabled := enableFileLogging
+	defer func() { enableFileLogging = originalEnabled }()
+
+	// Test that getter returns current value
+	enableFileLogging = true
+	result := GetFileLogging()
+	if !result {
+		t.Error("Expected GetFileLogging() to return true when enableFileLogging is true")
+	}
+
+	enableFileLogging = false
+	result = GetFileLogging()
+	if result {
+		t.Error("Expected GetFileLogging() to return false when enableFileLogging is false")
 	}
 }
 
@@ -402,5 +444,17 @@ func BenchmarkSetCallerSkipFrames(b *testing.B) {
 func BenchmarkGetCallerSkipFrames(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		GetCallerSkipFrames()
+	}
+}
+
+func BenchmarkSetFileLogging(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		SetFileLogging(true)
+	}
+}
+
+func BenchmarkGetFileLogging(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		GetFileLogging()
 	}
 }

@@ -56,11 +56,10 @@ var (
 	logFiles    = make(map[LogLevel]*os.File)
 	logMu       sync.Mutex
 	serviceName string
-
 	// Stamper configuration
 	stamperConfig = StamperConfig{
 		Enabled:     true,
-		FileLogging: true,
+		FileLogging: false, // Disabled by default - can be enabled via EnableFileLogging(true)
 	}
 
 	// Webhook delivery
@@ -111,6 +110,8 @@ func EnableStamper(enabled bool) {
 // EnableFileLogging enables or disables file logging
 func EnableFileLogging(enabled bool) {
 	stamperConfig.FileLogging = enabled
+	// Sync with global config
+	enableFileLogging = enabled
 }
 
 // SetWebhookConfig sets webhook configuration
