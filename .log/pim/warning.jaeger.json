@@ -34,3 +34,15 @@
   "goroutine_id": "(goroutine 1)",
   "error": false
 },
+{
+  "timestamp": "2025-07-13 08:51:39.678 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "warning",
+  "message": "This is a warning message",
+  "file": "logger.go:github.com/refactorroom/pim.Warning:L287",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-07-13 08:57:29.957 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "warning",
+  "message": "This is a warning message",
+  "file": "basic_logger.go:main.Example_basic:L9",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 08:57:46.903 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "warning",
+  "message": "This is a warning message",
+  "file": "basic_logger.go:main.Example_basic:L9",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 09:09:57.001 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "warning",
+  "message": "This is a warning message",
+  "file": "basic_logger.go:main.Example_basic:L9",
+  "error": false
+},

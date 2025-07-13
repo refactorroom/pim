@@ -125,13 +125,15 @@ const (
 )
 
 var (
-	currentLogLevel  = InfoLevel
-	showFileLine     = true
-	showGoroutineID  = true
-	showFunctionName = true
-	stackDepth       = 3
-	showPackageName  = true
-	showFullPath     = false
+	currentLogLevel   = InfoLevel
+	showFileLine      = true
+	showGoroutineID   = false
+	showFunctionName  = true
+	stackDepth        = 3
+	showPackageName   = true
+	showFullPath      = false
+	callerSkipFrames  = 3     // Number of frames to skip to find the actual caller
+	enableFileLogging = false // File logging disabled by default
 )
 
 // Helper functions for colored output
@@ -186,4 +188,34 @@ func SetStackDepth(depth int) {
 	}
 }
 
+// SetCallerSkipFrames sets the number of frames to skip when determining caller info
+func SetCallerSkipFrames(skip int) {
+	if skip >= 0 && skip <= 15 { // Allow 0-15 frames to skip
+		callerSkipFrames = skip
+	}
+}
 
+// GetCallerSkipFrames returns the current number of frames to skip
+func GetCallerSkipFrames() int {
+	return callerSkipFrames
+}
+
+// SetFileLogging enables/disables file logging
+func SetFileLogging(enabled bool) {
+	enableFileLogging = enabled
+}
+
+// GetFileLogging returns whether file logging is enabled
+func GetFileLogging() bool {
+	return enableFileLogging
+}
+
+// EnableFileLoggingWithPath enables file logging and initializes it with the given path
+// Note: This function requires the metrics package to be fully loaded
+// Use SetFileLogging(true) and then call pim.InitializeFileLogging() separately
+/*
+func EnableFileLoggingWithPath(baseDir, serviceName string) error {
+	enableFileLogging = true
+	return InitializeFileLogging(baseDir, serviceName)
+}
+*/

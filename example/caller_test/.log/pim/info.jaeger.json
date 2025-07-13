@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-07-13 09:17:08.219 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "info",
+  "message": "This is a test from testFunction",
+  "file": "main.go:main.testFunction:L10",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 09:17:08.220 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "info",
+  "message": "This is a test from testFunction",
+  "file": "main.go:main.testFunction:L10",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 09:17:08.220 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "info",
+  "message": "This is a test from testFunction",
+  "file": "main.go:main.testFunction:L10",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 09:17:08.222 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "info",
+  "message": "Goroutine ID should not be shown",
+  "file": "main.go:main.main:L31",
+  "error": false
+},
+{
+  "timestamp": "2025-07-13 09:17:08.223 UTC",
+  "trace_id": "",
+  "span_id": "",
+  "service_name": "app",
+  "operation_name": "",
+  "level": "info",
+  "message": "Goroutine ID should be shown",
+  "file": "main.go:main.main:L35",
+  "goroutine_id": "(goroutine 1)",
+  "error": false
+},

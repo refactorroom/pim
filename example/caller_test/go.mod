@@ -1,4 +1,4 @@
-module basic_logger
+module caller_test
 
 go 1.23.5
 

@@ -9,3 +9,13 @@ func Example_basic() {
 	pim.Warning("This is a warning message")
 	pim.Error("This is an error message")
 }
+func main() {
+	// Run the example
+	Example_basic()
+
+	// Output:
+	// Hello from pim!
+	// Operation completed successfully!
+	// This is a warning message
+	// This is an error message
+}

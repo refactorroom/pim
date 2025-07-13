@@ -1,4 +1,4 @@
-module basic_logger
+module file_logging_demo
 
 go 1.23.5
 

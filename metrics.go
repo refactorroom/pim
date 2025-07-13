@@ -56,11 +56,10 @@ var (
 	logFiles    = make(map[LogLevel]*os.File)
 	logMu       sync.Mutex
 	serviceName string
-
 	// Stamper configuration
 	stamperConfig = StamperConfig{
 		Enabled:     true,
-		FileLogging: true,
+		FileLogging: false, // Disabled by default - can be enabled via EnableFileLogging(true)
 	}
 
 	// Webhook delivery
@@ -111,6 +110,8 @@ func EnableStamper(enabled bool) {
 // EnableFileLogging enables or disables file logging
 func EnableFileLogging(enabled bool) {
 	stamperConfig.FileLogging = enabled
+	// Sync with global config
+	enableFileLogging = enabled
 }
 
 // SetWebhookConfig sets webhook configuration
@@ -276,7 +277,23 @@ func writeToFile(entry LogEntry, level LogLevel) error {
 
 	file, ok := logFiles[level]
 	if !ok {
-		return fmt.Errorf("no jaeger log file for level: %v", level)
+		// Try to create the log file if it doesn't exist
+		if logDir == "" {
+			// Initialize with default directory if not set
+			defaultDir := "."
+			logDir = filepath.Join(defaultDir, ".log/pim")
+			serviceName = "app"
+
+			if err := os.MkdirAll(logDir, 0755); err != nil {
+				return fmt.Errorf("failed to create log directory: %v", err)
+			}
+		}
+
+		// Create the specific log file for this level
+		if err := openJaegerLogFile(level); err != nil {
+			return fmt.Errorf("failed to create log file for level %v: %v", level, err)
+		}
+		file = logFiles[level]
 	}
 
 	entry.ServiceName = serviceName
