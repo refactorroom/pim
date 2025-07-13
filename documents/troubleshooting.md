@@ -6,7 +6,7 @@
 
 #### "Package not found"
 ```
-go: github.com/yourusername/clg@latest: reading github.com/yourusername/clg/go.mod: 404 Not Found
+go: github.com/refactorrom/pim@latest: reading github.com/refactorrom/pim/go.mod: 404 Not Found
 ```
 
 **Solutions:**
@@ -82,7 +82,7 @@ logger.SetSkipFrames(1) // Try different values: 0, 1, 2, 3
 
 // For wrapper functions, increase skip frames
 func MyLog(msg string) {
-    logger.SetSkipFrames(3) // Skip wrapper + CLG internals
+    logger.SetSkipFrames(3) // Skip wrapper + pim internals
     logger.Info(msg)
 }
 ```
@@ -426,7 +426,7 @@ fmt.Printf("Go version: %s\n", runtime.Version())
 fmt.Printf("OS: %s\n", runtime.GOOS)
 fmt.Printf("Arch: %s\n", runtime.GOARCH)
 
-// CLG configuration
+// pim configuration
 fmt.Printf("File logging: %v\n", pim.GetFileLogging())
 fmt.Printf("Skip frames: %d\n", pim.GetSkipFrames())
 fmt.Printf("Goroutine ID: %v\n", pim.GetGoroutineIDEnabled())
@@ -437,7 +437,7 @@ fmt.Printf("Goroutine ID: %v\n", pim.GetGoroutineIDEnabled())
 ```go
 package main
 
-import "github.com/yourusername/clg/pim"
+import "github.com/refactorrom/pim"
 
 func main() {
     logger := pim.NewLogger().EnableFileLogging()

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module focuses on the CLG package's configuration system, teaching you how to work with existing configuration options and add new ones safely and effectively.
+This module focuses on the pim package's configuration system, teaching you how to work with existing configuration options and add new ones safely and effectively.
 
 ### What You'll Learn
 - Configuration architecture and patterns
@@ -15,7 +15,7 @@ This module focuses on the CLG package's configuration system, teaching you how 
 
 ### Global Configuration Model
 
-CLG uses a global configuration model where settings affect all logger instances unless overridden at the instance level.
+pim uses a global configuration model where settings affect all logger instances unless overridden at the instance level.
 
 #### Core Configuration Variables
 ```go
@@ -157,7 +157,7 @@ func GetLogLevelAtomic() LogLevel {
 }
 ```
 
-However, RWMutex is preferred in CLG for consistency and when protecting multiple related variables.
+However, RWMutex is preferred in pim for consistency and when protecting multiple related variables.
 
 ## Adding New Configuration Options
 
@@ -696,4 +696,4 @@ func TestGoodCleanup(t *testing.T) {
 
 In **Module 4: Writing Effective Tests**, you'll learn advanced testing techniques specifically for logging systems, including output capture, file testing, and performance testing.
 
-The configuration system is the foundation of CLG's flexibility. Understanding these patterns will help you add new features that integrate seamlessly with the existing architecture.
+The configuration system is the foundation of pim's flexibility. Understanding these patterns will help you add new features that integrate seamlessly with the existing architecture.

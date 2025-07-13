@@ -1,11 +1,11 @@
-# CLG Contributor Quick Reference
+# pim Contributor Quick Reference
 
 ## Quick Start Commands
 
 ```bash
 # Clone and setup
 git clone <repo-url>
-cd clg
+cd pim
 go mod tidy
 
 # Run all tests

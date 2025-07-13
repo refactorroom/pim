@@ -1,8 +1,8 @@
-# CLG Package API Reference
+# pim Package API Reference
 
 ## Overview
 
-This document provides a comprehensive API reference for the CLG (Custom Logger for Go) package, including all public functions, types, and configuration options.
+This document provides a comprehensive API reference for the pim package, including all public functions, types, and configuration options.
 
 ## Table of Contents
 1. [Core Types](#core-types)
@@ -523,7 +523,7 @@ var (
 ```go
 package main
 
-import "github.com/your-org/clg"
+import "github.com/refactorrom/pim"
 
 func main() {
     // Create a logger
@@ -534,14 +534,13 @@ func main() {
     logger.Error("Something went wrong")
     logger.Debug("Debug information")
 }
-```
 
 ### Configuration Example
 
 ```go
 package main
 
-import "github.com/your-org/clg"
+import "github.com/refactorrom/pim"
 
 func main() {
     // Configure logging
@@ -558,7 +557,6 @@ func main() {
     logger.Info("Configuration complete")
     logger.Debug("Debug mode enabled")
 }
-```
 
 ### Custom Output Example
 
@@ -567,7 +565,7 @@ package main
 
 import (
     "os"
-    "github.com/your-org/clg"
+    "github.com/refactorrom/pim"
 )
 
 func main() {
@@ -581,14 +579,13 @@ func main() {
     logger := pim.NewLoggerWithOutput(file)
     logger.Info("This goes to the file")
 }
-```
 
 ### Wrapper Function Example
 
 ```go
 package main
 
-import "github.com/your-org/clg"
+import "github.com/refactorrom/pim"
 
 func logWithContext(context string, message string, args ...interface{}) {
     // Skip one extra frame to show the actual caller
@@ -606,14 +603,13 @@ func main() {
     logWithContext("AUTH", "User %s logged in", "john_doe")
     // Output will show main() as the caller, not logWithContext()
 }
-```
 
 ### Performance-Conscious Logging
 
 ```go
 package main
 
-import "github.com/your-org/clg"
+import "github.com/refactorrom/pim"
 
 func main() {
     logger := pim.NewLogger()
@@ -632,7 +628,6 @@ func computeExpensiveDebugInfo() interface{} {
     // Expensive computation here
     return "expensive data"
 }
-```
 
 ## Thread Safety
 
@@ -647,8 +642,8 @@ All configuration functions are thread-safe and can be called from multiple goro
 
 ## Error Handling
 
-The CLG package is designed to be robust and will not panic under normal circumstances. File logging errors are handled gracefully and will fall back to console output when possible.
+The pim package is designed to be robust and will not panic under normal circumstances. File logging errors are handled gracefully and will fall back to console output when possible.
 
 ---
 
-*This API reference covers all public interfaces of the CLG package. For implementation details and contribution guidelines, see the [contribution modules](../lession_contribute/).*
+*This API reference covers all public interfaces of the pim package. For implementation details and contribution guidelines, see the [contribution modules](../lession_contribute/).*

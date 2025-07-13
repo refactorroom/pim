@@ -1,8 +1,8 @@
-# Module 2: Understanding CLG Architecture
+# Module 2: Understanding pim Architecture
 
 ## Overview
 
-This module provides a deep dive into the CLG package architecture, explaining how different components work together and interact.
+This module provides a deep dive into the pim package architecture, explaining how different components work together and interact.
 
 ### What You'll Learn
 - Core components and their responsibilities
@@ -534,4 +534,4 @@ Now that you understand the architecture:
 - **Module 4**: Learn advanced testing techniques
 - **Module 5**: Implement new features using these patterns
 
-Understanding this architecture will help you make informed decisions when contributing to the CLG package and ensure your changes fit well with the existing design.
+Understanding this architecture will help you make informed decisions when contributing to the pim package and ensure your changes fit well with the existing design.

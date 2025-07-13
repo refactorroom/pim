@@ -2,13 +2,13 @@
 
 ## Overview
 
-This guide covers performance considerations, benchmarks, and optimization techniques for the CLG logging package.
+This guide covers performance considerations, benchmarks, and optimization techniques for the pim logging package.
 
 ## Performance Characteristics
 
 ### Memory Usage
 
-CLG is designed for minimal memory allocation:
+pim is designed for minimal memory allocation:
 
 - **Zero allocation** for disabled log levels
 - **Minimal allocation** for enabled logs
@@ -75,7 +75,7 @@ func logUserActions(actions []UserAction) {
 ### 4. Buffer Pool Usage
 
 ```go
-// CLG automatically uses buffer pools, but you can help:
+// pim automatically uses buffer pools, but you can help:
 // Reuse logger instances rather than creating new ones
 var globalLogger = pim.NewLogger()
 
@@ -133,7 +133,7 @@ if production {
 ### Buffered Writing
 
 ```go
-// CLG uses buffered writers by default
+// pim uses buffered writers by default
 // But you can tune buffer sizes for your use case
 logger := pim.NewLogger().
     EnableFileLogging().

@@ -1,6 +1,6 @@
 # Documentation Index
 
-Welcome to the CLG (Comprehensive Logging for Go) documentation. This index provides easy navigation to all available documentation.
+Welcome to the pim documentation. This index provides easy navigation to all available documentation.
 
 ## Quick Navigation
 
@@ -42,7 +42,7 @@ Welcome to the CLG (Comprehensive Logging for Go) documentation. This index prov
 |----------|-------------|
 | [API Reference](./api_reference.md) | Complete API documentation |
 | [04 - Writing Tests](./lession_contribute/04_writing_tests.md) | Testing strategies and examples |
-| [05 - Adding Features](./lession_contribute/05_adding_features.md) | How to extend CLG functionality |
+| [05 - Adding Features](./lession_contribute/05_adding_features.md) | How to extend pim functionality |
 
 ### Performance
 | Document | Description |

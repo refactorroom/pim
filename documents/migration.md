@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide helps you migrate between versions of the CLG logging package and from other logging libraries.
+This guide helps you migrate between versions of the pim logging package and from other logging libraries.
 
 ## Version Migration
 
@@ -26,7 +26,7 @@ This guide helps you migrate between versions of the CLG logging package and fro
 
 **Step 1: Update Dependencies**
 ```bash
-go get github.com/yourusername/clg@v2.0.0
+go get github.com/refactorrom/pim@v2.0.0
 go mod tidy
 ```
 
@@ -77,7 +77,7 @@ For easier migration, you can create a compatibility wrapper:
 // compat.go - Wrapper for v1.x behavior
 package main
 
-import "github.com/yourusername/clg/pim"
+import "github.com/refactorrom/pim"
 
 func NewV1Logger() *pim.Logger {
     return pim.NewLogger().
@@ -108,14 +108,13 @@ func main() {
 
 **New Code:**
 ```go
-import "github.com/yourusername/clg/pim"
+import "github.com/refactorrom/pim"
 
 func main() {
     logger := pim.NewLogger()
     logger.Info("Info message: %s", value)
     logger.Info("Simple message")
 }
-```
 
 ### From `logrus`
 
@@ -136,7 +135,7 @@ func main() {
 
 **New Code:**
 ```go
-import "github.com/yourusername/clg/pim"
+import "github.com/refactorrom/pim"
 
 func main() {
     logger := pim.NewLogger()
@@ -149,7 +148,6 @@ func main() {
     logger.SetLevel(pim.LevelDebug)
     logger.Debug("Debug message")
 }
-```
 
 ### From `zap`
 
@@ -170,7 +168,7 @@ func main() {
 
 **New Code:**
 ```go
-import "github.com/yourusername/clg/pim"
+import "github.com/refactorrom/pim"
 
 func main() {
     logger := pim.NewLogger().EnableFileLogging()
@@ -180,7 +178,6 @@ func main() {
         "action": "login",
     }).Info("User logged in")
 }
-```
 
 ### From `slog` (Go 1.21+)
 
@@ -200,7 +197,7 @@ func main() {
 
 **New Code:**
 ```go
-import "github.com/yourusername/clg/pim"
+import "github.com/refactorrom/pim"
 
 func main() {
     logger := pim.NewLogger()
@@ -210,7 +207,6 @@ func main() {
         "action": "login",
     }).Info("User logged in")
 }
-```
 
 ## Configuration Migration
 
@@ -223,7 +219,7 @@ package main
 
 import (
     "os"
-    "github.com/yourusername/clg/pim"
+    "github.com/refactorrom/pim"
 )
 
 func createMigratedLogger() *pim.Logger {
@@ -238,7 +234,7 @@ func createMigratedLogger() *pim.Logger {
     
     // Migrate from other loggers
     if os.Getenv("LOGRUS_LEVEL") != "" {
-        // Convert logrus level to CLG level
+        // Convert logrus level to pim level
         level := convertLogrusLevel(os.Getenv("LOGRUS_LEVEL"))
         logger.SetLevel(level)
     }
@@ -268,7 +264,7 @@ func convertLogrusLevel(logrusLevel string) pim.Level {
 ```go
 import (
     "github.com/sirupsen/logrus" // Old
-    "github.com/yourusername/clg/pim" // New
+    "github.com/refactorrom/pim" // New
 )
 
 func main() {
@@ -276,7 +272,7 @@ func main() {
     oldLogger := logrus.New()
     newLogger := pim.NewLogger()
     
-    // New code uses CLG
+    // New code uses pim
     newLogger.Info("New feature implemented")
     
     // Old code still uses logrus (temporarily)
@@ -298,8 +294,8 @@ func LogInfo(msg string, fields map[string]interface{}) {
 
 **Phase 3: Complete Migration**
 ```go
-// Remove old imports and use only CLG
-import "github.com/yourusername/clg/pim"
+// Remove old imports and use only pim
+import "github.com/refactorrom/pim"
 
 var globalLogger = pim.NewLogger().EnableFileLogging()
 
@@ -327,7 +323,7 @@ func TestWithLogrus(t *testing.T) {
 
 **New Tests:**
 ```go
-func TestWithCLG(t *testing.T) {
+func TestWithPim(t *testing.T) {
     var buf bytes.Buffer
     logger := pim.NewLogger().SetOutput(&buf)
     
@@ -470,7 +466,7 @@ logger := pim.NewLogger().
 
 ## Migration Checklist
 
-- [ ] Update dependencies to CLG v2.x
+- [ ] Update dependencies to pim v2.x
 - [ ] Enable file logging if needed
 - [ ] Enable goroutine ID if needed
 - [ ] Update configuration calls

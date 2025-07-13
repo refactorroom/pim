@@ -2,7 +2,7 @@
 
 ## Overview
 
-CLG provides flexible configuration options that can be set globally or per-logger instance. This guide covers all available configuration options and best practices.
+pim provides flexible configuration options that can be set globally or per-logger instance. This guide covers all available configuration options and best practices.
 
 ## Global Configuration
 
@@ -11,7 +11,7 @@ CLG provides flexible configuration options that can be set globally or per-logg
 File logging is **disabled by default** to prevent unexpected file creation.
 
 ```go
-import "github.com/yourusername/clg/pim"
+import "github.com/refactorrom/pim"
 
 // Enable file logging globally
 pim.SetFileLogging(true)

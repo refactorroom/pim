@@ -5,12 +5,12 @@
 ### Go Modules (Recommended)
 ```bash
 go mod init your-project
-go get github.com/yourusername/clg
+go get github.com/refactorrom/pim
 ```
 
 ### Direct Installation
 ```bash
-go get -u github.com/yourusername/clg
+go get -u github.com/refactorrom/pim
 ```
 
 ## Requirements
@@ -26,12 +26,12 @@ go get -u github.com/yourusername/clg
 package main
 
 import (
-    "github.com/yourusername/clg/pim"
+    "github.com/refactorrom/pim"
 )
 
 func main() {
     logger := pim.NewLogger()
-    logger.Info("CLG installation successful!")
+    logger.Info("pim installation successful!")
 }
 ```
 
@@ -42,7 +42,7 @@ go run main.go
 
 Expected output:
 ```
-2025-07-13 10:30:45 [INFO] CLG installation successful!
+2025-07-13 10:30:45 [INFO] pim installation successful!
 ```
 
 ## Troubleshooting

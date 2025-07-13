@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide covers security considerations, best practices, and potential vulnerabilities when using the CLG logging package.
+This guide covers security considerations, best practices, and potential vulnerabilities when using the pim logging package.
 
 ## Log Security Fundamentals
 

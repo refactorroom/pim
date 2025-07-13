@@ -2,7 +2,7 @@
 
 ## Overview
 
-This final module covers the community aspects of contributing to the CLG package: collaboration, code review, project maintenance, and building a healthy open-source community.
+This final module covers the community aspects of contributing to the pim package: collaboration, code review, project maintenance, and building a healthy open-source community.
 
 ### What You'll Learn
 - Pull request process and best practices
@@ -19,11 +19,11 @@ This final module covers the community aspects of contributing to the CLG packag
 ```bash
 # Fork the repository on GitHub
 # Then clone your fork
-git clone https://github.com/YOUR-USERNAME/clg.git
-cd clg
+git clone https://github.com/YOUR-USERNAME/pim.git
+cd pim
 
 # Add upstream remote
-git remote add upstream https://github.com/ORIGINAL-OWNER/clg.git
+git remote add upstream https://github.com/ORIGINAL-OWNER/pim.git
 
 # Verify remotes
 git remote -v
@@ -124,7 +124,7 @@ cd example/basic_logger && go run basic_logger.go
 cd ../file_logging_demo && go run main.go
 
 # Test against real applications if possible
-go mod edit -replace github.com/org/clg=../path/to/your/fork
+go mod edit -replace github.com/refactorrom/pim=../path/to/your/fork
 ```
 
 #### Creating the Pull Request
@@ -386,7 +386,7 @@ A clear and concise description of what you expected to happen.
 
 ## Environment
 - Go version: [e.g. 1.19]
-- CLG version: [e.g. v1.2.0]
+- pim version: [e.g. v1.2.0]
 - OS: [e.g. Ubuntu 20.04]
 
 ## Additional Context
@@ -485,7 +485,7 @@ For significant features that require multiple PRs:
 ## Epic: Structured Logging Support
 
 ### Overview
-Add comprehensive structured logging capabilities to CLG.
+Add comprehensive structured logging capabilities to pim.
 
 ### Implementation Plan
 1. **Phase 1**: Basic structured types (#123)
@@ -527,7 +527,7 @@ When working with dependent projects:
 ## Integration Testing with Dependent Projects
 
 ### Test Matrix
-| Project | Version | CLG Version | Status |
+| Project | Version | pim Version | Status |
 |---------|---------|-------------|--------|
 | WebApp  | v2.1.0  | v1.2.3     | ✅ Pass |
 | API     | v1.5.0  | v1.2.3     | ⚠️ Warn |
@@ -543,7 +543,7 @@ For projects affected by breaking changes:
 
 ## Conclusion
 
-Contributing to open source is about more than just code - it's about building a community, sharing knowledge, and creating lasting value. The CLG project benefits from:
+Contributing to open source is about more than just code - it's about building a community, sharing knowledge, and creating lasting value. The pim project benefits from:
 
 ### Technical Excellence
 - High-quality, well-tested code
@@ -581,7 +581,7 @@ Contributing to open source is about more than just code - it's about building a
 
 ## Final Thoughts
 
-You've completed all seven modules of the CLG contribution guide! You now have:
+You've completed all seven modules of the pim contribution guide! You now have:
 
 1. **Module 1**: Development environment and project basics
 2. **Module 2**: Deep understanding of the architecture
@@ -591,8 +591,8 @@ You've completed all seven modules of the CLG contribution guide! You now have:
 6. **Module 6**: Performance optimization knowledge
 7. **Module 7**: Community collaboration skills
 
-You're now ready to make meaningful contributions to the CLG package and help build a thriving community around it. Welcome to the team! 🚀
+You're now ready to make meaningful contributions to the pim package and help build a thriving community around it. Welcome to the team! 🚀
 
 ---
 
-*Happy contributing! The CLG package and its community are stronger with your participation.*
+*Happy contributing! The pim package and its community are stronger with your participation.*

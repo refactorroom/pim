@@ -1,6 +1,6 @@
-# CLG Contribution Learning Path
+# pim Contribution Learning Path
 
-Welcome to the comprehensive learning path for contributing to the CLG (Custom Logger for Go) package! This modular course will take you from beginner to expert contributor.
+Welcome to the comprehensive learning path for contributing to the pim package! This modular course will take you from beginner to expert contributor.
 
 ## Learning Modules
 
@@ -188,7 +188,7 @@ Ready to start? Choose your path:
 
 ## Overview
 
-The CLG (Custom Logger for Go) package is a flexible, feature-rich logging library designed for Go applications. It provides structured logging, caller information, file logging, metrics, and extensive customization options.
+The pim package is a flexible, feature-rich logging library designed for Go applications. It provides structured logging, caller information, file logging, metrics, and extensive customization options.
 
 ### Key Features
 - Multiple log levels (Panic, Error, Warning, Info, Debug, Trace)
@@ -204,7 +204,7 @@ The CLG (Custom Logger for Go) package is a flexible, feature-rich logging libra
 
 ### Core Files Structure
 ```
-clg/
+pim/
 ├── config.go           # Global configuration and settings
 ├── logger.go           # Main logging functionality
 ├── logger_core.go      # Core logger implementation
@@ -252,7 +252,7 @@ go version
 
 # Clone the repository
 git clone <repository-url>
-cd clg
+cd pim
 
 # Install dependencies
 go mod tidy
@@ -772,7 +772,7 @@ Create examples demonstrating new features:
 // example/new_feature_demo/main.go
 package main
 
-import "github.com/your-org/clg"
+import "github.com/refactorrom/pim"
 
 func main() {
     // Demonstrate the new feature
@@ -789,7 +789,7 @@ func main() {
 
 ## Conclusion
 
-Contributing to the CLG package involves understanding its architecture, following established patterns, writing comprehensive tests, and maintaining backward compatibility. The key principles are:
+Contributing to the pim package involves understanding its architecture, following established patterns, writing comprehensive tests, and maintaining backward compatibility. The key principles are:
 
 1. **Safety First**: Always clean up resources and handle errors
 2. **Test Everything**: Write tests before and after changes
@@ -797,7 +797,7 @@ Contributing to the CLG package involves understanding its architecture, followi
 4. **Document Changes**: Update docs and examples
 5. **Performance Matters**: Consider the impact of changes
 
-By following this guide, you'll be able to contribute effectively to the CLG logging package and help improve its functionality for all users.
+By following this guide, you'll be able to contribute effectively to the pim logging package and help improve its functionality for all users.
 
 ### Quick Start Checklist for Contributors
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module focuses on performance optimization, best practices, and advanced techniques for maintaining high-quality code in the CLG package.
+This module focuses on performance optimization, best practices, and advanced techniques for maintaining high-quality code in the pim package.
 
 ### What You'll Learn
 - Performance optimization strategies
@@ -995,4 +995,4 @@ In the final module, you'll learn about:
 - Community interaction and maintenance
 - Long-term project health
 
-Master these performance principles to ensure the CLG package remains fast, reliable, and production-ready.
+Master these performance principles to ensure the pim package remains fast, reliable, and production-ready.

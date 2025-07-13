@@ -1,8 +1,8 @@
-# Module 1: Getting Started with CLG Contributions
+# Module 1: Getting Started with pim Contributions
 
 ## Overview
 
-The CLG (Custom Logger for Go) package is a flexible, feature-rich logging library designed for Go applications. This module covers the basics of getting started with contributing to the project.
+The pim package is a flexible, feature-rich logging library designed for Go applications. This module covers the basics of getting started with contributing to the project.
 
 ### What You'll Learn
 - Package overview and key features
@@ -23,7 +23,7 @@ The CLG (Custom Logger for Go) package is a flexible, feature-rich logging libra
 - Performance metrics
 
 ### Philosophy
-The CLG package follows these principles:
+The pim package follows these principles:
 - **Performance First**: Minimal overhead for production use
 - **Developer Friendly**: Easy to use and debug
 - **Configurable**: Extensive customization options
@@ -46,7 +46,7 @@ go env GOROOT
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd clg
+cd pim
 
 # Install dependencies
 go mod tidy
@@ -89,7 +89,7 @@ go install golang.org/x/tools/cmd/godoc@latest
 
 ### Core Files
 ```
-clg/
+pim/
 ├── config.go           # Global configuration
 ├── logger.go           # Main logging interface
 ├── logger_core.go      # Core implementation
@@ -358,4 +358,4 @@ go vet ./...         # Static analysis
 - `*_test.go` - Test files
 - `example/` - Working examples
 
-Congratulations! You're now ready to start contributing to the CLG package. Move on to Module 2 to dive deeper into the architecture.
+Congratulations! You're now ready to start contributing to the pim package. Move on to Module 2 to dive deeper into the architecture.

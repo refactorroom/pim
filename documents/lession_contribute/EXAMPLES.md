@@ -1,6 +1,6 @@
 # Practical Examples for Contributors
 
-This document provides hands-on examples for common contribution scenarios to the CLG logging package.
+This document provides hands-on examples for common contribution scenarios to the pim logging package.
 
 ## Table of Contents
 1. [Adding a New Log Level](#adding-a-new-log-level)
@@ -638,7 +638,7 @@ import (
 
 func TestFileLoggingComprehensive(t *testing.T) {
     // Setup: Create temporary directory for test logs
-    tempDir, err := ioutil.TempDir("", "clg_test_logs")
+    tempDir, err := ioutil.TempDir("", "pim_test_logs")
     if err != nil {
         t.Fatalf("Failed to create temp directory: %v", err)
     }
@@ -1031,7 +1031,7 @@ func formatMessageOptimized(level LogLevel, prefix, message, caller string) stri
 }
 ```
 
-These examples demonstrate common patterns and best practices for contributing to the CLG logging package. Each example includes complete implementation details, comprehensive tests, and follows the established patterns in the codebase.
+These examples demonstrate common patterns and best practices for contributing to the pim logging package. Each example includes complete implementation details, comprehensive tests, and follows the established patterns in the codebase.
 
 Remember to:
 1. Always include tests for new functionality

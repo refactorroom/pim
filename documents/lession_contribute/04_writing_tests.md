@@ -2,7 +2,7 @@
 
 ## Overview
 
-Testing is crucial for maintaining the reliability and performance of the CLG package. This module covers comprehensive testing strategies, patterns, and best practices specific to logging systems.
+Testing is crucial for maintaining the reliability and performance of the pim package. This module covers comprehensive testing strategies, patterns, and best practices specific to logging systems.
 
 ### What You'll Learn
 - Testing strategies for logging systems
@@ -276,7 +276,7 @@ Use temporary directories for file tests:
 ```go
 func TestFileLogging(t *testing.T) {
     // Create temporary directory
-    tempDir, err := ioutil.TempDir("", "clg_test")
+    tempDir, err := ioutil.TempDir("", "pim_test")
     if err != nil {
         t.Fatalf("Failed to create temp directory: %v", err)
     }
@@ -325,7 +325,7 @@ func TestFileLogging(t *testing.T) {
 Verify specific file content:
 ```go
 func TestFileContentFormat(t *testing.T) {
-    tempDir, err := ioutil.TempDir("", "clg_test")
+    tempDir, err := ioutil.TempDir("", "pim_test")
     if err != nil {
         t.Fatalf("Failed to create temp directory: %v", err)
     }
@@ -395,7 +395,7 @@ func TestFileContentFormat(t *testing.T) {
 Test log file rotation:
 ```go
 func TestFileRotation(t *testing.T) {
-    tempDir, err := ioutil.TempDir("", "clg_rotation_test")
+    tempDir, err := ioutil.TempDir("", "pim_rotation_test")
     if err != nil {
         t.Fatalf("Failed to create temp directory: %v", err)
     }
@@ -783,7 +783,7 @@ func TestLogger() (*Logger, *strings.Builder) {
 
 // TestLoggerWithFile creates a logger with file output in a temp directory
 func TestLoggerWithFile(t *testing.T) (*Logger, string, func()) {
-    tempDir, err := ioutil.TempDir("", "clg_test")
+    tempDir, err := ioutil.TempDir("", "pim_test")
     if err != nil {
         t.Fatalf("Failed to create temp directory: %v", err)
     }
@@ -927,4 +927,4 @@ Aim for high coverage in critical areas:
 
 In **Module 5: Adding New Features**, you'll learn how to implement new functionality using the testing patterns and architectural knowledge from previous modules.
 
-Effective testing is essential for maintaining the reliability and performance of the CLG package. The patterns and techniques in this module will help you write comprehensive, maintainable tests that catch issues early and ensure the logging system works correctly under all conditions.
+Effective testing is essential for maintaining the reliability and performance of the pim package. The patterns and techniques in this module will help you write comprehensive, maintainable tests that catch issues early and ensure the logging system works correctly under all conditions.

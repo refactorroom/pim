@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module teaches you how to add new features to the CLG package using the patterns and knowledge from previous modules. You'll learn the complete process from design to implementation to testing.
+This module teaches you how to add new features to the pim package using the patterns and knowledge from previous modules. You'll learn the complete process from design to implementation to testing.
 
 ### What You'll Learn
 - Feature design and planning process
@@ -836,7 +836,7 @@ package main
 
 import (
     "time"
-    "github.com/your-org/clg"
+    "github.com/refactorrom/pim"
 )
 
 func main() {
@@ -870,7 +870,7 @@ Add feature documentation to README:
 ```markdown
 ## Process ID Display
 
-The CLG package can optionally display the process ID in log messages, which is useful in multi-process environments.
+The pim package can optionally display the process ID in log messages, which is useful in multi-process environments.
 
 ### Configuration
 
